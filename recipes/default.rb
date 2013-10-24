@@ -48,6 +48,11 @@ python_virtualenv err_virtualenv do
   action :create
 end
 
+python_pip "xmpppy" do
+  version "0.5.0rc1"
+  virtualenv err_virtualenv
+end
+
 python_pip "err" do
   version node['err']['version']
   virtualenv err_virtualenv
