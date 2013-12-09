@@ -82,6 +82,10 @@ BOT_IDENTITY = {
     ## in on HipChat's website
     # 'token' : 'ed4b74d62833267d98aa99f312ff04',
 
+    <% if node['err']['token'] -%>
+    'token': '<%= node['err']['token'] %>',
+    <% end -%>
+
     ## Campfire mode (Comment the others above if using this mode)
     # 'subdomain': 'yatta',
     # 'username' : 'errbot',

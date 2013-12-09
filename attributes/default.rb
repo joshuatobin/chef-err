@@ -14,6 +14,7 @@ default['err']['async'] = false
 default['err']['full_name'] = 'Err'
 default['err']['username'] = 'err@localhost'
 default['err']['password'] = 'changeme'
+default['err']['token'] = undef
 default['err']['rooms'] = ['err@conference.example.com']
 default['err']['admins'] = ['gbin@localhost']
 default['err']['command_prefix'] = '!'
