@@ -85,7 +85,7 @@ template ::File.join(node['err']['install_path'],'config.py') do
   mode 0640
   notifies :create, "ruby_block[err_service_trigger]", :immediately
   variables({
-    :plugin_paths => node.run_state['err_plugin_paths']
+    :plugin_paths => node['err']['plugin_path']
   })
 end
 
