@@ -84,9 +84,6 @@ template ::File.join(node['err']['install_path'],'config.py') do
   group node['err']['group']
   mode 0640
   notifies :create, "ruby_block[err_service_trigger]", :immediately
-  variables({
-    :plugin_paths => node['err']['plugin_path']
-  })
 end
 
 base_command = ::File.join(err_virtualenv,'bin','err.py')
